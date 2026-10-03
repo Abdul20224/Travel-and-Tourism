@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pinterest Style Gallery</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:whitesmoke;
+}
+
+
+.filters{
+    display:flex;
+    gap:12px;
+    padding:15px 20px;
+    position:sticky;
+    top:0;
+    background:white;
+    z-index:10;
+}
+
+.filters button{
+    padding:8px 16px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+    background:white;
+    font-size:14px;
+}
+
+.filters button.active{
+    background:rgb(242, 211, 185);
+}
+
+
+.gallery{
+    column-count:4;
+    column-gap:15px;
+    padding:20px;
+}
+
+.card{
+    background:whitesmoke;
+    margin-bottom:15px;
+    border-radius:16px;
+    overflow:hidden;
+    break-inside:avoid;
+    box-shadow:0 4px 8px rgba(0,0,0,0.08);
+}
+
+.card img{
+    width:100%;
+    display:block;
+    transition:0.4s;
+}
+
+.card:hover img{
+    transform:scale(1.05);
+}
+
+.card .text{
+    padding:10px;
+    font-size:14px;
+    color:black;
+}
+
+
+@media(max-width:1100px){
+    .gallery{ column-count:3; }
+}
+@media(max-width:768px){
+    .gallery{ column-count:2; }
+}
+@media(max-width:480px){
+    .gallery{ column-count:1; }
+}
+</style>
+</head>
+
+<body>
+
+
+<div class="filters">
+    <button class="active">Tourist</button>
+    <button>Kerala tourist</button>
+    <button>Video</button>
+    <button>Hidden</button>
+</div>
+
+
+<div class="gallery">
+
+    <div class="card">
+        <img src="download (20).jpg">
+        <div class="text">Wayanad wildlife sanctuary</div>
+    </div>
+
+    <div class="card">
+        <img src="images (9).jpg">
+        <div class="text">Kuruva island</div>
+    </div>
+
+    <div class="card">
+        <img src="download (21).jpg">
+        <div class="text"> Banasura Sagar Dam</div>
+    </div>
+
+    <div class="card">
+        <img src="download (22).jpg">
+        <div class="text">Edakkal vaves</div>
+    </div>
+
+    <div class="card">
+        <img src="download (25).jpg">
+        <div class="text">Resort Stay</div>
+    </div>
+
+    <div class="card">
+        <img src="download (23).jpg">
+        <div class="text">Honey museum/div>
+    </div>
+
+    <div class="card">
+        <img src="download (24).jpg">
+        <div class="text">Soochippara falls</div>
+    </div>
+
+</div>
+
+</body>
+</html>
